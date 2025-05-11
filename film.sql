@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 11, 2025 at 04:26 PM
+-- Generation Time: May 11, 2025 at 07:16 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -171,28 +171,6 @@ CREATE TABLE `job_batches` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `languages`
---
-
-CREATE TABLE `languages` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `languages`
---
-
-INSERT INTO `languages` (`id`, `name`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'کوردی', 1, NULL, NULL, NULL);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `menus`
 --
 
@@ -242,28 +220,26 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (16, '2025_01_27_192133_create_role_user_table', 1),
 (17, '2025_01_27_192150_create_permission_role_table', 1),
 (18, '2025_01_27_194036_create_product_categories_table', 1),
-(19, '2025_01_27_194922_create_languages_table', 1),
-(20, '2025_01_27_194922_create_years_table', 1),
-(21, '2025_01_27_194928_create_products_table', 1),
-(22, '2025_01_27_200149_create_product_images_table', 1),
-(23, '2025_01_27_200150_create_product_videos_table', 1),
-(24, '2025_01_28_164519_create_provinces_table', 1),
-(25, '2025_01_28_164539_create_cities_table', 1),
-(26, '2025_01_28_165323_create_public_sms_table', 1),
-(27, '2025_01_28_165343_create_public_mail_table', 1),
-(28, '2025_01_28_165402_create_public_mail_files_table', 1),
-(29, '2025_01_28_165757_create_product_user_table', 1),
-(30, '2025_01_28_174215_create_orders_table', 1),
-(31, '2025_01_28_174227_create_order_items_table', 1),
-(32, '2025_01_28_174228_create_payments_table', 1),
-(33, '2025_02_03_235603_create_settings_table', 1),
-(34, '2025_02_10_151710_create_notifications_table', 1),
-(35, '2025_02_10_174548_create_otps_table', 1),
-(36, '2025_02_15_233039_create_banners_table', 1),
-(37, '2025_03_03_113910_create_permission_user_table', 1),
-(38, '2025_03_07_184436_create_ratings_table', 1),
-(39, '2025_05_07_185937_add_two_factor_columns_to_users_table', 1),
-(40, '2025_05_07_190354_create_personal_access_tokens_table', 1);
+(19, '2025_01_27_194928_create_products_table', 1),
+(20, '2025_01_27_200149_create_product_images_table', 1),
+(21, '2025_01_27_200150_create_product_videos_table', 1),
+(22, '2025_01_28_164519_create_provinces_table', 1),
+(23, '2025_01_28_164539_create_cities_table', 1),
+(24, '2025_01_28_165323_create_public_sms_table', 1),
+(25, '2025_01_28_165343_create_public_mail_table', 1),
+(26, '2025_01_28_165402_create_public_mail_files_table', 1),
+(27, '2025_01_28_165757_create_product_user_table', 1),
+(28, '2025_01_28_174215_create_orders_table', 1),
+(29, '2025_01_28_174227_create_order_items_table', 1),
+(30, '2025_01_28_174228_create_payments_table', 1),
+(31, '2025_02_03_235603_create_settings_table', 1),
+(32, '2025_02_10_151710_create_notifications_table', 1),
+(33, '2025_02_10_174548_create_otps_table', 1),
+(34, '2025_02_15_233039_create_banners_table', 1),
+(35, '2025_03_03_113910_create_permission_user_table', 1),
+(36, '2025_03_07_184436_create_ratings_table', 1),
+(37, '2025_05_07_185937_add_two_factor_columns_to_users_table', 1),
+(38, '2025_05_07_190354_create_personal_access_tokens_table', 1);
 
 -- --------------------------------------------------------
 
@@ -339,7 +315,7 @@ CREATE TABLE `otps` (
 --
 
 INSERT INTO `otps` (`id`, `token`, `user_id`, `otp_code`, `login_id`, `type`, `used`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Y4QR8haSZWmn30dfkxixBfIJGfay7ExHNhCZGx7QSGKbXkw6I1HUIRNOZV0o', 1, '581328', '9183818662', 0, 1, 0, '2025-05-11 08:46:54', '2025-05-11 08:47:06');
+(1, 'NdlGm9jHIdJKQ7rGVTB4zHG18szfjcWIhQcby9D6eQZH8WAIVfjtaieNmrHw', 1, '869802', '9183818662', 0, 1, 0, '2025-05-11 13:31:53', '2025-05-11 13:32:17');
 
 -- --------------------------------------------------------
 
@@ -493,89 +469,89 @@ CREATE TABLE `permission_role` (
 --
 
 INSERT INTO `permission_role` (`role_id`, `permission_id`, `created_at`) VALUES
-(1, 1, '2025-05-11 12:18:01'),
-(1, 2, '2025-05-11 12:18:01'),
-(1, 3, '2025-05-11 12:18:01'),
-(1, 4, '2025-05-11 12:18:01'),
-(1, 6, '2025-05-11 12:18:02'),
-(1, 7, '2025-05-11 12:18:02'),
-(1, 8, '2025-05-11 12:18:02'),
-(1, 9, '2025-05-11 12:18:02'),
-(1, 10, '2025-05-11 12:18:02'),
-(1, 11, '2025-05-11 12:18:02'),
-(1, 13, '2025-05-11 12:18:02'),
-(1, 14, '2025-05-11 12:18:02'),
-(1, 15, '2025-05-11 12:18:02'),
-(1, 16, '2025-05-11 12:18:02'),
-(1, 17, '2025-05-11 12:18:02'),
-(1, 18, '2025-05-11 12:18:02'),
-(1, 19, '2025-05-11 12:18:02'),
-(1, 20, '2025-05-11 12:18:02'),
-(1, 21, '2025-05-11 12:18:02'),
-(1, 22, '2025-05-11 12:18:02'),
-(1, 23, '2025-05-11 12:18:02'),
-(1, 24, '2025-05-11 12:18:02'),
-(1, 25, '2025-05-11 12:18:03'),
-(1, 26, '2025-05-11 12:18:03'),
-(1, 27, '2025-05-11 12:18:03'),
-(1, 28, '2025-05-11 12:18:03'),
-(1, 29, '2025-05-11 12:18:03'),
-(1, 30, '2025-05-11 12:18:03'),
-(1, 31, '2025-05-11 12:18:03'),
-(1, 32, '2025-05-11 12:18:03'),
-(1, 33, '2025-05-11 12:18:03'),
-(1, 34, '2025-05-11 12:18:03'),
-(1, 35, '2025-05-11 12:18:03'),
-(1, 36, '2025-05-11 12:18:03'),
-(1, 37, '2025-05-11 12:18:03'),
-(1, 38, '2025-05-11 12:18:03'),
-(1, 39, '2025-05-11 12:18:03'),
-(1, 40, '2025-05-11 12:18:03'),
-(1, 41, '2025-05-11 12:18:03'),
-(1, 42, '2025-05-11 12:18:03'),
-(1, 43, '2025-05-11 12:18:04'),
-(1, 44, '2025-05-11 12:18:04'),
-(1, 45, '2025-05-11 12:18:04'),
-(1, 46, '2025-05-11 12:18:04'),
-(1, 47, '2025-05-11 12:18:04'),
-(1, 48, '2025-05-11 12:18:04'),
-(1, 49, '2025-05-11 12:18:04'),
-(1, 50, '2025-05-11 12:18:04'),
-(1, 51, '2025-05-11 12:18:04'),
-(1, 52, '2025-05-11 12:18:04'),
-(1, 53, '2025-05-11 12:18:04'),
-(1, 54, '2025-05-11 12:18:04'),
-(1, 55, '2025-05-11 12:18:04'),
-(1, 56, '2025-05-11 12:18:04'),
-(1, 57, '2025-05-11 12:18:04'),
-(1, 58, '2025-05-11 12:18:04'),
-(1, 59, '2025-05-11 12:18:04'),
-(1, 60, '2025-05-11 12:18:04'),
-(1, 61, '2025-05-11 12:18:04'),
-(1, 62, '2025-05-11 12:18:04'),
-(1, 63, '2025-05-11 12:18:04'),
-(1, 64, '2025-05-11 12:18:05'),
-(1, 65, '2025-05-11 12:18:05'),
-(1, 66, '2025-05-11 12:18:05'),
-(1, 67, '2025-05-11 12:18:05'),
-(1, 68, '2025-05-11 12:18:05'),
-(1, 69, '2025-05-11 12:18:05'),
-(1, 70, '2025-05-11 12:18:05'),
-(1, 71, '2025-05-11 12:18:05'),
-(1, 72, '2025-05-11 12:18:05'),
-(1, 73, '2025-05-11 12:18:05'),
-(1, 74, '2025-05-11 12:18:05'),
-(1, 75, '2025-05-11 12:18:05'),
-(1, 76, '2025-05-11 12:18:05'),
-(1, 77, '2025-05-11 12:18:05'),
-(1, 78, '2025-05-11 12:18:05'),
-(1, 79, '2025-05-11 12:18:05'),
-(1, 80, '2025-05-11 12:18:05'),
-(1, 81, '2025-05-11 12:18:05'),
-(1, 82, '2025-05-11 12:18:05'),
-(1, 83, '2025-05-11 12:18:06'),
-(1, 84, '2025-05-11 12:18:06'),
-(1, 85, '2025-05-11 12:18:06');
+(1, 1, '2025-05-11 17:04:28'),
+(1, 2, '2025-05-11 17:04:28'),
+(1, 3, '2025-05-11 17:04:28'),
+(1, 4, '2025-05-11 17:04:28'),
+(1, 6, '2025-05-11 17:04:29'),
+(1, 7, '2025-05-11 17:04:29'),
+(1, 8, '2025-05-11 17:04:29'),
+(1, 9, '2025-05-11 17:04:29'),
+(1, 10, '2025-05-11 17:04:29'),
+(1, 11, '2025-05-11 17:04:29'),
+(1, 13, '2025-05-11 17:04:29'),
+(1, 14, '2025-05-11 17:04:29'),
+(1, 15, '2025-05-11 17:04:29'),
+(1, 16, '2025-05-11 17:04:29'),
+(1, 17, '2025-05-11 17:04:29'),
+(1, 18, '2025-05-11 17:04:29'),
+(1, 19, '2025-05-11 17:04:30'),
+(1, 20, '2025-05-11 17:04:30'),
+(1, 21, '2025-05-11 17:04:30'),
+(1, 22, '2025-05-11 17:04:30'),
+(1, 23, '2025-05-11 17:04:30'),
+(1, 24, '2025-05-11 17:04:30'),
+(1, 25, '2025-05-11 17:04:30'),
+(1, 26, '2025-05-11 17:04:30'),
+(1, 27, '2025-05-11 17:04:30'),
+(1, 28, '2025-05-11 17:04:30'),
+(1, 29, '2025-05-11 17:04:30'),
+(1, 30, '2025-05-11 17:04:30'),
+(1, 31, '2025-05-11 17:04:30'),
+(1, 32, '2025-05-11 17:04:30'),
+(1, 33, '2025-05-11 17:04:30'),
+(1, 34, '2025-05-11 17:04:31'),
+(1, 35, '2025-05-11 17:04:31'),
+(1, 36, '2025-05-11 17:04:31'),
+(1, 37, '2025-05-11 17:04:31'),
+(1, 38, '2025-05-11 17:04:31'),
+(1, 39, '2025-05-11 17:04:31'),
+(1, 40, '2025-05-11 17:04:31'),
+(1, 41, '2025-05-11 17:04:31'),
+(1, 42, '2025-05-11 17:04:31'),
+(1, 43, '2025-05-11 17:04:31'),
+(1, 44, '2025-05-11 17:04:31'),
+(1, 45, '2025-05-11 17:04:31'),
+(1, 46, '2025-05-11 17:04:31'),
+(1, 47, '2025-05-11 17:04:32'),
+(1, 48, '2025-05-11 17:04:32'),
+(1, 49, '2025-05-11 17:04:32'),
+(1, 50, '2025-05-11 17:04:32'),
+(1, 51, '2025-05-11 17:04:32'),
+(1, 52, '2025-05-11 17:04:32'),
+(1, 53, '2025-05-11 17:04:32'),
+(1, 54, '2025-05-11 17:04:32'),
+(1, 55, '2025-05-11 17:04:32'),
+(1, 56, '2025-05-11 17:04:32'),
+(1, 57, '2025-05-11 17:04:32'),
+(1, 58, '2025-05-11 17:04:32'),
+(1, 59, '2025-05-11 17:04:32'),
+(1, 60, '2025-05-11 17:04:32'),
+(1, 61, '2025-05-11 17:04:32'),
+(1, 62, '2025-05-11 17:04:32'),
+(1, 63, '2025-05-11 17:04:32'),
+(1, 64, '2025-05-11 17:04:32'),
+(1, 65, '2025-05-11 17:04:32'),
+(1, 66, '2025-05-11 17:04:32'),
+(1, 67, '2025-05-11 17:04:32'),
+(1, 68, '2025-05-11 17:04:33'),
+(1, 69, '2025-05-11 17:04:33'),
+(1, 70, '2025-05-11 17:04:33'),
+(1, 71, '2025-05-11 17:04:33'),
+(1, 72, '2025-05-11 17:04:33'),
+(1, 73, '2025-05-11 17:04:33'),
+(1, 74, '2025-05-11 17:04:33'),
+(1, 75, '2025-05-11 17:04:33'),
+(1, 76, '2025-05-11 17:04:33'),
+(1, 77, '2025-05-11 17:04:33'),
+(1, 78, '2025-05-11 17:04:33'),
+(1, 79, '2025-05-11 17:04:33'),
+(1, 80, '2025-05-11 17:04:33'),
+(1, 81, '2025-05-11 17:04:33'),
+(1, 82, '2025-05-11 17:04:33'),
+(1, 83, '2025-05-11 17:04:33'),
+(1, 84, '2025-05-11 17:04:33'),
+(1, 85, '2025-05-11 17:04:33');
 
 -- --------------------------------------------------------
 
@@ -662,21 +638,16 @@ CREATE TABLE `products` (
   `name` varchar(255) NOT NULL,
   `view` bigint(20) NOT NULL DEFAULT 0,
   `duration` varchar(255) DEFAULT NULL,
-  `director` varchar(255) DEFAULT NULL,
   `summary` text NOT NULL,
   `story` text NOT NULL,
   `actors` text DEFAULT NULL,
   `slug` varchar(255) DEFAULT NULL,
   `image` text DEFAULT NULL,
   `video` text DEFAULT NULL,
-  `video_path` text DEFAULT NULL,
   `price` decimal(20,3) NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
   `tags` varchar(255) NOT NULL,
-  `sold_number` tinyint(4) NOT NULL DEFAULT 0,
   `category_id` bigint(20) UNSIGNED NOT NULL,
-  `year_id` bigint(20) UNSIGNED NOT NULL,
-  `language_id` bigint(20) UNSIGNED NOT NULL,
   `published_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -687,8 +658,8 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `name`, `view`, `duration`, `director`, `summary`, `story`, `actors`, `slug`, `image`, `video`, `video_path`, `price`, `status`, `tags`, `sold_number`, `category_id`, `year_id`, `language_id`, `published_at`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'درام', 0, 'نیم ساعت', '<p>نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;</p>', '<p>نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;</p>', '<p>نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;</p>', '<p>نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;نیم ساعت&nbsp;</p>', 'درام', '\"images\\\\product\\\\2025\\\\05\\\\11\\\\1746968466.jpg\"', 'files\\video-files\\2025\\05\\11\\1746968466.jpg', 'files\\video-files-main\\2025\\05\\11\\1746968466.jpg', 10000.000, 1, 'درام', 0, 1, 1, 1, '2025-05-11 09:30:44', '2025-05-11 09:15:52', '2025-05-11 09:31:06', NULL);
+INSERT INTO `products` (`id`, `name`, `view`, `duration`, `summary`, `story`, `actors`, `slug`, `image`, `video`, `price`, `status`, `tags`, `category_id`, `published_at`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'درام', 0, '1ساعت', '<p>تزرتزرتزرتزرتزرتزرتزرتزر</p>', '<p>تزرتزرتزرتزرتزرتزرتزرتزر</p>', 'تزرتزرتزرتزرتزرتزرتزرتزر', 'درام', '\"images\\\\product\\\\2025\\\\05\\\\11\\\\1746983477.jpg\"', 'files\\video-files\\2025\\05\\11\\1746983477.jpg', 10000.000, 1, 'درام', 1, '2025-05-11 13:40:28', '2025-05-11 13:41:17', '2025-05-11 13:41:17', NULL);
 
 -- --------------------------------------------------------
 
@@ -716,7 +687,7 @@ CREATE TABLE `product_categories` (
 --
 
 INSERT INTO `product_categories` (`id`, `name`, `description`, `slug`, `image`, `status`, `show_in_menu`, `tags`, `parent_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'درام', '<p>درام-اجتماعی</p>', 'درام', '{\"indexArray\":{\"large\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746965943\\\\1746965943_large.jpg\",\"medium\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746965943\\\\1746965943_medium.jpg\",\"small\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746965943\\\\1746965943_small.jpg\"},\"directory\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746965943\",\"currentImage\":\"medium\"}', 1, 1, 'درام,اجتماعی', NULL, '2025-05-11 08:49:05', '2025-05-11 08:49:05', NULL);
+(1, 'درام', '<p>درام-اجتماعی</p>', 'درام', '{\"indexArray\":{\"large\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746983309\\\\1746983309_large.jpg\",\"medium\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746983309\\\\1746983309_medium.jpg\",\"small\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746983309\\\\1746983309_small.jpg\"},\"directory\":\"images\\\\product-category\\\\2025\\\\05\\\\11\\\\1746983309\",\"currentImage\":\"medium\"}', 1, 1, 'درام', NULL, '2025-05-11 13:38:29', '2025-05-11 13:38:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -867,7 +838,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'admin', 'ادمین', 0, '2025-05-11 08:48:01', '2025-05-11 08:48:01', NULL);
+(1, 'admin', 'ادمین', 0, '2025-05-11 13:34:28', '2025-05-11 13:36:29', NULL);
 
 -- --------------------------------------------------------
 
@@ -886,7 +857,7 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`user_id`, `role_id`, `created_at`) VALUES
-(1, 1, '2025-05-11 12:18:27');
+(1, 1, '2025-05-11 17:06:41');
 
 -- --------------------------------------------------------
 
@@ -908,7 +879,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('vd5UXKZT4PMom4g4QFkmDVZ508tbeyOujH92QDfg', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWVNKUmtmMmpiUmUya2R5REtKa0ZuMFByTmtuU2xvT2tqTkJYVnhuYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czo0OiJjYXJ0IjthOjE6e2k6MTtPOjI1OiJBcHBcTW9kZWxzXE1hcmtldFxQcm9kdWN0IjozMTp7czoxMzoiACoAY29ubmVjdGlvbiI7czo1OiJteXNxbCI7czo4OiIAKgB0YWJsZSI7czo4OiJwcm9kdWN0cyI7czoxMzoiACoAcHJpbWFyeUtleSI7czoyOiJpZCI7czoxMDoiACoAa2V5VHlwZSI7czozOiJpbnQiO3M6MTI6ImluY3JlbWVudGluZyI7YjoxO3M6NzoiACoAd2l0aCI7YTowOnt9czoxMjoiACoAd2l0aENvdW50IjthOjA6e31zOjE5OiJwcmV2ZW50c0xhenlMb2FkaW5nIjtiOjA7czoxMDoiACoAcGVyUGFnZSI7aToxNTtzOjY6ImV4aXN0cyI7YjoxO3M6MTg6Indhc1JlY2VudGx5Q3JlYXRlZCI7YjowO3M6Mjg6IgAqAGVzY2FwZVdoZW5DYXN0aW5nVG9TdHJpbmciO2I6MDtzOjEzOiIAKgBhdHRyaWJ1dGVzIjthOjIzOntzOjI6ImlkIjtpOjE7czo0OiJuYW1lIjtzOjg6Itiv2LHYp9mFIjtzOjQ6InZpZXciO2k6MDtzOjg6ImR1cmF0aW9uIjtzOjE1OiLZhtuM2YUg2LPYp9i52KoiO3M6ODoiZGlyZWN0b3IiO3M6MTMzOiI8cD7ZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDs8L3A+IjtzOjc6InN1bW1hcnkiO3M6MTMzOiI8cD7ZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDs8L3A+IjtzOjU6InN0b3J5IjtzOjEzMzoiPHA+2YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A7PC9wPiI7czo2OiJhY3RvcnMiO3M6MTMzOiI8cD7ZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDvZhtuM2YUg2LPYp9i52KombmJzcDs8L3A+IjtzOjQ6InNsdWciO3M6ODoi2K/Ysdin2YUiO3M6NToiaW1hZ2UiO3M6NDc6IiJpbWFnZXNcXHByb2R1Y3RcXDIwMjVcXDA1XFwxMVxcMTc0Njk2ODQ2Ni5qcGciIjtzOjU6InZpZGVvIjtzOjQzOiJmaWxlc1x2aWRlby1maWxlc1wyMDI1XDA1XDExXDE3NDY5Njg0NjYuanBnIjtzOjEwOiJ2aWRlb19wYXRoIjtzOjQ4OiJmaWxlc1x2aWRlby1maWxlcy1tYWluXDIwMjVcMDVcMTFcMTc0Njk2ODQ2Ni5qcGciO3M6NToicHJpY2UiO3M6OToiMTAwMDAuMDAwIjtzOjY6InN0YXR1cyI7aToxO3M6NDoidGFncyI7czo4OiLYr9ix2KfZhSI7czoxMToic29sZF9udW1iZXIiO2k6MDtzOjExOiJjYXRlZ29yeV9pZCI7aToxO3M6NzoieWVhcl9pZCI7aToxO3M6MTE6Imxhbmd1YWdlX2lkIjtpOjE7czoxMjoicHVibGlzaGVkX2F0IjtzOjE5OiIyMDI1LTA1LTExIDEzOjAwOjQ0IjtzOjEwOiJjcmVhdGVkX2F0IjtzOjE5OiIyMDI1LTA1LTExIDEyOjQ1OjUyIjtzOjEwOiJ1cGRhdGVkX2F0IjtzOjE5OiIyMDI1LTA1LTExIDEzOjAxOjA2IjtzOjEwOiJkZWxldGVkX2F0IjtOO31zOjExOiIAKgBvcmlnaW5hbCI7YToyMzp7czoyOiJpZCI7aToxO3M6NDoibmFtZSI7czo4OiLYr9ix2KfZhSI7czo0OiJ2aWV3IjtpOjA7czo4OiJkdXJhdGlvbiI7czoxNToi2YbbjNmFINiz2KfYudiqIjtzOjg6ImRpcmVjdG9yIjtzOjEzMzoiPHA+2YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A7PC9wPiI7czo3OiJzdW1tYXJ5IjtzOjEzMzoiPHA+2YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A7PC9wPiI7czo1OiJzdG9yeSI7czoxMzM6IjxwPtmG24zZhSDYs9in2LnYqiZuYnNwO9mG24zZhSDYs9in2LnYqiZuYnNwO9mG24zZhSDYs9in2LnYqiZuYnNwO9mG24zZhSDYs9in2LnYqiZuYnNwO9mG24zZhSDYs9in2LnYqiZuYnNwO9mG24zZhSDYs9in2LnYqiZuYnNwOzwvcD4iO3M6NjoiYWN0b3JzIjtzOjEzMzoiPHA+2YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A72YbbjNmFINiz2KfYudiqJm5ic3A7PC9wPiI7czo0OiJzbHVnIjtzOjg6Itiv2LHYp9mFIjtzOjU6ImltYWdlIjtzOjQ3OiIiaW1hZ2VzXFxwcm9kdWN0XFwyMDI1XFwwNVxcMTFcXDE3NDY5Njg0NjYuanBnIiI7czo1OiJ2aWRlbyI7czo0MzoiZmlsZXNcdmlkZW8tZmlsZXNcMjAyNVwwNVwxMVwxNzQ2OTY4NDY2LmpwZyI7czoxMDoidmlkZW9fcGF0aCI7czo0ODoiZmlsZXNcdmlkZW8tZmlsZXMtbWFpblwyMDI1XDA1XDExXDE3NDY5Njg0NjYuanBnIjtzOjU6InByaWNlIjtzOjk6IjEwMDAwLjAwMCI7czo2OiJzdGF0dXMiO2k6MTtzOjQ6InRhZ3MiO3M6ODoi2K/Ysdin2YUiO3M6MTE6InNvbGRfbnVtYmVyIjtpOjA7czoxMToiY2F0ZWdvcnlfaWQiO2k6MTtzOjc6InllYXJfaWQiO2k6MTtzOjExOiJsYW5ndWFnZV9pZCI7aToxO3M6MTI6InB1Ymxpc2hlZF9hdCI7czoxOToiMjAyNS0wNS0xMSAxMzowMDo0NCI7czoxMDoiY3JlYXRlZF9hdCI7czoxOToiMjAyNS0wNS0xMSAxMjo0NTo1MiI7czoxMDoidXBkYXRlZF9hdCI7czoxOToiMjAyNS0wNS0xMSAxMzowMTowNiI7czoxMDoiZGVsZXRlZF9hdCI7Tjt9czoxMDoiACoAY2hhbmdlcyI7YTowOnt9czo4OiIAKgBjYXN0cyI7YToyOntzOjU6ImltYWdlIjtzOjU6ImFycmF5IjtzOjEwOiJkZWxldGVkX2F0IjtzOjg6ImRhdGV0aW1lIjt9czoxNzoiACoAY2xhc3NDYXN0Q2FjaGUiO2E6MDp7fXM6MjE6IgAqAGF0dHJpYnV0ZUNhc3RDYWNoZSI7YTowOnt9czoxMzoiACoAZGF0ZUZvcm1hdCI7TjtzOjEwOiIAKgBhcHBlbmRzIjthOjA6e31zOjE5OiIAKgBkaXNwYXRjaGVzRXZlbnRzIjthOjA6e31zOjE0OiIAKgBvYnNlcnZhYmxlcyI7YTowOnt9czoxMjoiACoAcmVsYXRpb25zIjthOjA6e31zOjEwOiIAKgB0b3VjaGVzIjthOjA6e31zOjEwOiJ0aW1lc3RhbXBzIjtiOjE7czoxMzoidXNlc1VuaXF1ZUlkcyI7YjowO3M6OToiACoAaGlkZGVuIjthOjA6e31zOjEwOiIAKgB2aXNpYmxlIjthOjA6e31zOjExOiIAKgBmaWxsYWJsZSI7YToxOTp7aTowO3M6NDoibmFtZSI7aToxO3M6NDoidmlldyI7aToyO3M6ODoiZHVyYXRpb24iO2k6MztzOjc6InN1bW1hcnkiO2k6NDtzOjQ6InNsdWciO2k6NTtzOjU6ImltYWdlIjtpOjY7czo2OiJzdGF0dXMiO2k6NztzOjQ6InRhZ3MiO2k6ODtzOjU6InN0b3J5IjtpOjk7czo1OiJ2aWRlbyI7aToxMDtzOjU6InByaWNlIjtpOjExO3M6MTE6Imxhbmd1YWdlX2lkIjtpOjEyO3M6MTE6InNvbGRfbnVtYmVyIjtpOjEzO3M6MTA6InZpZGVvX3BhdGgiO2k6MTQ7czo3OiJ5ZWFyX2lkIjtpOjE1O3M6MTE6ImNhdGVnb3J5X2lkIjtpOjE2O3M6MTI6InB1Ymxpc2hlZF9hdCI7aToxNztzOjg6ImRpcmVjdG9yIjtpOjE4O3M6NjoiYWN0b3JzIjt9czoxMDoiACoAZ3VhcmRlZCI7YToxOntpOjA7czoxOiIqIjt9czoxNjoiACoAZm9yY2VEZWxldGluZyI7YjowO319fQ==', 1746973559);
+('JknAjhhlsIPu4nADMLyUKkuT341799vBmPPwP3yF', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiMEZGZ0h0RE1hSWpHa215V2FIMWFZcVo0bjZiUzU2ZG9CNjc4cU9pZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDI6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9hZG1pbi9tYXJrZXQvcHJvZHVjdCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7fQ==', 1746983479);
 
 -- --------------------------------------------------------
 
@@ -1050,30 +1021,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `mobile`, `mobile_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `national_code`, `first_name`, `last_name`, `slug`, `profile_photo_path`, `email_verified_at`, `activation`, `activation_date`, `user_type`, `status`, `current_team_id`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, NULL, '9183818662', '2025-05-11 08:47:06', '$2y$12$6WHhsfNKOBktUjys2waGTuD60KhoDBhzdA5H4khQvTY0vFIXVQFwC', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, 1, NULL, NULL, '2025-05-11 08:46:53', '2025-05-11 08:47:06', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `years`
---
-
-CREATE TABLE `years` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT 0,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `years`
---
-
-INSERT INTO `years` (`id`, `name`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, '1401', 1, NULL, NULL, NULL),
-(2, '1402', 1, NULL, NULL, NULL);
+(1, NULL, '9183818662', '2025-05-11 13:32:17', '$2y$12$FYIdHh1zCFVucyKSVTlFEOVOXpergnpbKYODXliJFZesEwFYOa3Du', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, 1, 1, NULL, NULL, '2025-05-11 13:31:53', '2025-05-11 13:32:17', NULL);
 
 --
 -- Indexes for dumped tables
@@ -1137,12 +1085,6 @@ ALTER TABLE `jobs`
 -- Indexes for table `job_batches`
 --
 ALTER TABLE `job_batches`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `languages`
---
-ALTER TABLE `languages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1251,9 +1193,7 @@ ALTER TABLE `post_categories`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `products_slug_unique` (`slug`),
-  ADD KEY `products_category_id_foreign` (`category_id`),
-  ADD KEY `products_year_id_foreign` (`year_id`),
-  ADD KEY `products_language_id_foreign` (`language_id`);
+  ADD KEY `products_category_id_foreign` (`category_id`);
 
 --
 -- Indexes for table `product_categories`
@@ -1391,12 +1331,6 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_slug_unique` (`slug`);
 
 --
--- Indexes for table `years`
---
-ALTER TABLE `years`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1437,12 +1371,6 @@ ALTER TABLE `jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `languages`
---
-ALTER TABLE `languages`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
@@ -1452,7 +1380,7 @@ ALTER TABLE `menus`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -1605,12 +1533,6 @@ ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `years`
---
-ALTER TABLE `years`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
 -- Constraints for dumped tables
 --
 
@@ -1684,9 +1606,7 @@ ALTER TABLE `posts`
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `product_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_language_id_foreign` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_year_id_foreign` FOREIGN KEY (`year_id`) REFERENCES `years` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `product_categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `product_categories`
