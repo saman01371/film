@@ -85,48 +85,6 @@
                             </section>
 
 
-
-
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">انتخاب سال انتشار</label>
-                                    <select name="year_id" id="" class="form-control form-control-sm">
-                                        <option value="">سال انتشار را انتخاب کنید</option>
-                                        @foreach ($years as $year)
-                                            <option value="{{ $year->id }}" @if(old('year_id') == $year->id) selected @endif>{{ $year->name }}</option>
-                                        @endforeach
-
-                                    </select>
-                                </div>
-                                @error('year_id')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="">انتخاب زبان</label>
-                                    <select name="language_id" id="" class="form-control form-control-sm">
-                                        <option value="">زبان را انتخاب کنید</option>
-                                        @foreach ($languages as $language)
-                                            <option value="{{ $language->id }}" @if(old('language_id') == $language->id) selected @endif>{{ $language->name }}</option>
-                                        @endforeach
-
-                                    </select>
-                                </div>
-                                @error('language_id')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
                             <section class="col-12 col-md-6">
                                 <div class="form-group">
                                     <label for="image">تصویر </label>
@@ -154,21 +112,6 @@
                             </span>
                                 @enderror
                             </section>
-                            <section class="col-12 col-md-6">
-                                <div class="form-group">
-                                    <label for="video_path">فیلم اصلی </label>
-                                    <input type="file" name="video_path" id="video_path" class="form-control form-control-sm">
-                                </div>
-                                @error('video_path')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
-
-
 
 
                             <section class="col-12 col-md-6">
@@ -213,19 +156,6 @@
                                 @enderror
                             </section>
 
-                            <section class="col-12">
-                                <div class="form-group">
-                                    <label for=""> بازیگران</label>
-                                    <textarea  id="director" name="director" class="form-control form-control-sm" rows="6">{{ old('director') }}</textarea>
-                                </div>
-                                @error('director')
-                                <span class="alert_required bg-danger text-white p-1 rounded" role="alert">
-                                <strong>
-                                    {{ $message }}
-                                </strong>
-                            </span>
-                                @enderror
-                            </section>
 
 
                             <section class="col-12">
@@ -320,7 +250,6 @@
         CKEDITOR.replace('story');
         CKEDITOR.replace('summary');
         CKEDITOR.replace('director');
-        CKEDITOR.replace('actors');
     </script>
 
     <script>

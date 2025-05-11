@@ -17,18 +17,7 @@ class Product extends Model
 
     protected $casts = ['image' => 'array'];
 
-    protected $fillable = ['name', 'view', 'duration', 'summary', 'slug', 'image', 'status', 'tags', 'story', 'video', 'price','language_id', 'sold_number' , 'video_path', 'year_id', 'category_id', 'published_at', 'director', 'actors'];
-
-
-    public function year()
-    {
-        return $this->belongsTo(Year::class, 'year_id');
-    }
-
-    public function language()
-    {
-        return $this->belongsTo(Language::class, 'language_id');
-    }
+    protected $fillable = ['name', 'view', 'duration', 'summary', 'slug', 'image', 'status', 'tags', 'story', 'video', 'price' , 'category_id', 'published_at', 'actors'];
 
     public function category()
     {

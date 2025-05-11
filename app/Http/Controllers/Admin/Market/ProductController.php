@@ -43,10 +43,8 @@ class ProductController extends Controller
     {
         $user = auth()->user();
         if ($user->can('create-product')) {
-            $years = Year::all();
-            $languages = Language::all();
             $productCategories = ProductCategory::all();
-            return view('admin.market.product.create', compact('years', 'productCategories', 'languages'));
+            return view('admin.market.product.create', compact( 'productCategories'));
         } else {
             abort(403);
         }
@@ -129,10 +127,8 @@ class ProductController extends Controller
         $user = auth()->user();
         //dd($user->hasRole('admin'));
         if ($user->can('edit-product') || ($user->hasRole('admin'))) {
-            $years = Year::all();
-            $languages = Language::all();
             $productCategories = ProductCategory::all();
-            return view('admin.market.product.edit', compact('product', 'productCategories', 'years', 'languages'));
+            return view('admin.market.product.edit', compact('product', 'productCategories'));
         } else {
             abort(403);
         }
@@ -172,21 +168,8 @@ class ProductController extends Controller
                 }
                 $fileService->setExclusiveDirectory('files' . DIRECTORY_SEPARATOR . 'video-files');
                 $fileService->setFileSize($request->video);
-                $fileSize = $fileService->getFileSize();
                 $resultVideo = $fileService->moveToPublic($request->video);
-                $fileFormat = $fileService->getFileFormat();
                 $inputs['video'] = $result;
-            }
-            if ($request->hasFile('video_path')) {
-                if (!empty($product->video_path)) {
-                    $fileService->deleteFile($product->video_path);
-                }
-                $fileService->setExclusiveDirectory('files' . DIRECTORY_SEPARATOR . 'video-files-main');
-                $fileService->setFileSize($request->video_path);
-                $fileSize = $fileService->getFileSize();
-                $resultPath = $fileService->moveToStorage($request->video_path);
-                $fileFormat = $fileService->getFileFormat();
-                $inputs['video_path'] = $result;
             }
 
             if ($result === false) {
@@ -194,7 +177,6 @@ class ProductController extends Controller
             }
             $inputs['image'] = $result;
             $inputs['video'] = $resultVideo;
-            $inputs['video_path'] = $resultPath;
             $product->update($inputs);
 
             return redirect()->route('admin.market.product.index')->with('swal-success', 'محصول  شما با موفقیت ویرایش شد');
