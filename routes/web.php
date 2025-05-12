@@ -86,7 +86,6 @@ Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function (
         });
 
 
-
         //order
         Route::prefix('order')->group(function () {
             Route::get('/', [OrderController::class, 'all'])->name('admin.market.order.all');
@@ -399,6 +398,15 @@ Route::namespace('Auth')->group(function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
+Route::get('product/view', function () {
+    return view('user.pages.shop.product.details');
+});
+
+Route::get('actor/view', function () {
+    return view('user.pages.actor.view');
+});
+
+
 // نمایش لیست فیلم‌ها
 Route::get('/films', [FilmController::class, 'index'])->name('films.index');
 
@@ -422,7 +430,6 @@ Route::post('/orders', [CustomerOrderController::class, 'store'])->name('orders.
 // پرداخت
 Route::get('/payment', [CustomerPaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment', [CustomerPaymentController::class, 'store'])->name('payment.store');
-
 
 
 Route::middleware([
