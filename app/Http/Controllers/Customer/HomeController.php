@@ -19,7 +19,7 @@ class HomeController extends Controller
     {
         $films = Product::latest()->take(8)->get();
         $categories = ProductCategory::all();
-        return view('app.home', compact('films', 'categories'));
+        return view('user.home', compact('films', 'categories'));
     }
 
 
